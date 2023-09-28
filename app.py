@@ -64,7 +64,7 @@ def streaming():
         querystring = {f"title": {user_input}, "country": "us",
                        "show_type": "all", "output_language": "en"}
         headers = {
-            "X-RapidAPI-Key": ra_keys,
+            "X-RapidAPI-Key": ra_key,
             "X-RapidAPI-Host": "streaming-availability.p.rapidapi.com"
         }  # these code block is from the API website, a suggestion on how to call the website.
 
