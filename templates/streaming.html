@@ -1,0 +1,23 @@
+{% extends 'layout.html' %} {% block content%}
+
+<h1>This is where you can watch the show!</h1>
+<div>
+  {%for data in streaming_data%}
+  <ul>
+    <li>Service : {{data['service'].title()}}</li>
+    <ul>
+      <li>Type: {{data['streamingType']}}</li>
+      <li>Link: <a href="{{data['link']}}"> {{data['link']}} </a></li>
+    </ul>
+  </ul>
+  {% endfor %}
+  <form action="/">
+    <input type="submit" value="Back to Homepage" />
+  </form>
+</div>
+
+{% endblock content%}
+
+<!--  using for loop to list down the dictionary
+and present each info accordingly. adding the back to homepage button to
+redirect.-->

@@ -1,0 +1,34 @@
+{% extends 'layout.html' %} {% block content %}
+
+<h1>{{movie_data['Title']}}</h1>
+<div>
+  <img src={{movie_data["Poster"]}}/>
+  <div>{{movie_data['Title']}}</div>
+  <div class="rating">
+    <h4>Rating : {{movie_data['imdbRating']}}</h4>
+  </div>
+  <div class="details">
+    <ul>
+      <li>Rated: {{movie_data['Rated']}}</li>
+      <li>Year: {{movie_data['Year']}}</li>
+      <li>Runtime: {{movie_data['Runtime']}}</li>
+    </ul>
+  </div>
+  <h3>Plot:</h3>
+  <p>{{movie_data['Plot']}}</p>
+</div>
+
+<form method="POST" action="/streaming">
+  <label for="user_input"></label>
+  <input
+    type="text"
+    id="user_input"
+    name="user_input"
+    value="{{movie_data['Title']}}" />
+  <input type="submit" value="Where to watch?" />
+</form>
+
+{% endblock content %}
+
+<!-- movie_data json file was passed through.
+using the data dictionary to present data accordingly.-->

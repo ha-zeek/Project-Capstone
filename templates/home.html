@@ -1,3 +1,15 @@
-{% extends 'layout.html' %} {% block %}
+{% extends 'layout.html' %} {% block content%}
+
 <h1>This is the home page</h1>
-{% endblock %}
+<h1>What movie would you like to know?</h1>
+<form method="POST" action="/movie">
+  <label for="user_input">Enter something :</label>
+  <input type="text" id="user_input" name="user_input" />
+  <input type="submit" value="submit" />
+</form>
+
+{% endblock content%}
+
+<!-- This is the homepage. Using HTML form tag.
+User input will be pass through flask and used. Once submitted. It will redirect
+user to /movie URL. -->
