@@ -1,13 +1,13 @@
 {% extends 'layout.html' %} {% block content%}
-
-<h1>This is the home page</h1>
-<h1>What movie would you like to know?</h1>
-<form method="POST" action="/movie">
-  <label for="user_input">Enter something :</label>
-  <input type="text" id="user_input" name="user_input" />
-  <input type="submit" value="submit" />
-</form>
-
+<div>
+  <h1>Welcome to movie webApp!</h1>
+  <h1>Search for movies!</h1>
+  <form method="POST" action="/movie">
+    <label for="user_input">Enter movie name :</label>
+    <input type="text" id="user_input" name="user_input" />
+    <input type="submit" value="submit" />
+  </form>
+</div>
 {% endblock content%}
 
 <!-- This is the homepage. Using HTML form tag.

@@ -1,7 +1,7 @@
 {% extends 'layout.html' %} {% block content%}
 
 <h1>This is where you can watch the show!</h1>
-<div>
+<div class="streaming">
   {%for data in streaming_data%}
   <ul>
     <li>Service : {{data['service'].title()}}</li>
@@ -11,7 +11,7 @@
     </ul>
   </ul>
   {% endfor %}
-  <form action="/">
+  <form class="homepage" action="/">
     <input type="submit" value="Back to Homepage" />
   </form>
 </div>

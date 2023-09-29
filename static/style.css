@@ -1,1 +1,34 @@
-/* test test */
+body {
+  color: white;
+  background-color: black;
+  display: flex;
+  border: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  height: 100vh;
+  width: 50%;
+  padding: 100px;
+}
+
+ul {
+  list-style: none;
+}
+
+.line-space {
+  line-height: 3;
+}
+
+.title {
+  padding: 20px;
+  border: 5px;
+}
+
+.streaming {
+  text-align: left;
+}
+
+.homepage {
+  text-align: center;
+}
